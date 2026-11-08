@@ -36,9 +36,7 @@ class LangchainMainAgentService:
             base_url=st.secrets["OPENROUTER_API_BASE"],
         )
         self.sql_engine = create_engine(
-            database_sql_connection_string(Dialect.POSTGRES).replace(
-                "postgresql://", "postgresql+psycopg://", 1
-            ),
+            database_sql_connection_string(Dialect.POSTGRES),
             pool_pre_ping=True,
         )
         self.vectorstore = QdrantVectorStore(
