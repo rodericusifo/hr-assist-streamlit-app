@@ -54,7 +54,7 @@ uv sync
 Launch the Streamlit app using the `uv` environment:
 
 ```bash
-uv run streamlit run app.py
+uv run streamlit run frontend/web/main.py
 ```
 
 Once running, open your browser and navigate to `http://localhost:8501`.
